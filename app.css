@@ -105,14 +105,60 @@ header{
 .category-col h5:hover{
     color: #2874f0;
 }
+.fa-search{
+    position: absolute;
+    top: 30%;
+    left: 94%;
+    font-size: 18px;
+    color: #2874f0;
+}
+.fa-shopping-cart{
+    padding-right: 10px;
+}
+.fa-sort-down{
+    padding-left: 5px;
 
+}
 /* banner section  */
 .banner{
      width: 100%;
+     overflow: hidden;
+}
+
+.slider{
+    display: flex;
+    width: 4047px;
+    position: relative;
+    animation-name: slide;
+    animation-duration: 15s;
 }
 .slider img{
     width: 100%;
 }
+@keyframes slide{
+    0%{
+        left: 0px;
+    }
+    26.66%{
+        left: 0px;
+    }
+    33.33%{
+        left: -1349px;
+    }
+    60%{
+        left: -1349px;
+    }
+    66.66%{
+        left: -2698px;
+    }
+    93.33%{
+        left: -2698px;
+    }
+    100%{
+        left: -4047px;
+    }
+}
+
 /* common for all*/
 /* mobile section */
 .card{
