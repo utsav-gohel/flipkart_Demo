@@ -23,7 +23,10 @@ Open the file
 ```bash
 index.html
 ```
-
+## Hosting Demo of Home-Page
+```bash
+https://utsavgohel-simform.github.io/flipkart_Demo/
+```
 
 ## View of Home-Page
 
