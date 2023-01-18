@@ -11,6 +11,50 @@
     <!-- <link rel="stylesheet" href="" crossorigin="anonymous"> -->
 </head>
 <body>
+
+    <!-- Below is javascript code to run timer  -->
+    <script>
+        var firstproducts = 0;
+        function MoveRight(right) {
+            firstproducts = firstproducts - right;
+            console.log("first product ", firstproducts)
+            document.getElementById("im").style.transform = `translateX(${firstproducts}px)`;
+        }
+        function MoveLeft(left) {
+            firstproducts = firstproducts + left;
+            document.getElementById("im").style.transform = `translateX(${firstproducts}px)`;
+        }
+
+        /*Clock Script*/
+        // Set the date we're counting down to
+        var countDownDate = new Date("Jan 20, 2023 23:37:25").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Output the result in an element with id="demo"
+            document.getElementById("demo").innerHTML = hours + " : "
+                + minutes + " : " + seconds + "  " + "Left";
+
+            // If the count down is over, write some text 
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
     <!-- header section -->
     
     <header>
@@ -85,61 +129,75 @@
         </div>
     </section>
     <section>
-        <div class="card">
-            <div class="common-heading">
-                <div class="common-heading-left">
-                    <h1>Best Battery phones</h1>
-                    <h2>More than 4000mAh</h2>
+        <div class="dealsoftheday">
+            <div class="deals">
+                Deals Of The Day
+            </div>
+            <code>&#128354</code>
+            <div id="demo" class="clock"></div>
+            <button>View All</button>
+        </div>
+        <div style="display: flex; width: 100%; justify-content: space-between;">
+            <div class="card" style="width: 90%;">
+                <div class="common-heading">
+                    <div class="common-heading-left">
+                        <h1>Best Battery phones</h1>
+                        <h2>More than 4000mAh</h2>
+                    </div>
+                    <div class="common-heading-right">
+                        <button>View all</button>
+                    </div>
                 </div>
-                <div class="common-heading-right">
-                    <button>View all</button>
+                <div class="common-row">
+                    <div class="common-col">
+                        <img src="./flipkart images/p1.jpeg" alt="Mobile">
+                        <h3>Poco M2 pro</h3>
+                        <h4>5000mAh Battery</h4>
+                        <h6>Now at ₹13999.</h6>
+                    </div>
+                    <div class="common-col">
+                        <img src="./flipkart images/p2.jpeg" alt="Mobile">
+                        <h3>Techno Spark</h3>
+                        <h4>4500mAh Battery</h4>
+                        <h6>Now at ₹10000.</h6>
+                    </div>
+                    <div class="common-col">
+                        <img src="./flipkart images/p3.jpeg" alt="Mobile">
+                        <h3>Realme X2</h3>
+                        <h4>5000mAh Battery</h4>
+                        <h6>Now at ₹21999.</h6>
+                    </div>
+                    <div class="common-col">
+                        <img src="./flipkart images/p4.jpeg" alt="Mobile">
+                        <h3>Vivo v9</h3>
+                        <h4>5500mAh Battery</h4>
+                        <h6>Now at ₹14999.</h6>
+                    </div>
+                    <div class="common-col">
+                        <img src="./flipkart images/p5.jpeg" alt="Mobile">
+                        <h3>Oppo F1</h3>
+                        <h4>4000mAh Battery</h4>
+                        <h6>Now at ₹13899.</h6>
+                    </div>
+                    <div class="common-col">
+                        <img src="./flipkart images/p6.jpeg" alt="Mobile">
+                        <h3>Oneplush M1</h3>
+                        <h4>5500mAh Battery</h4>
+                        <h6>Now at ₹20999.</h6>
+                    </div>
+                    <div class="common-col">
+                        <img src="./flipkart images/p7.jpeg" alt="Mobile">
+                        <h3>Vivo V3</h3>
+                        <h4>5000mAh Battery</h4>
+                        <h6>Now at ₹10999.</h6>
+                    </div>
                 </div>
             </div>
-            <div class="common-row">
-                <div class="common-col">
-                    <img src="./flipkart images/p1.jpeg" alt="Mobile">
-                    <h3>Poco M2 pro</h3>
-                    <h4>5000mAh Battery</h4>
-                    <h6>Now at ₹13999.</h6>
-                </div>
-                <div class="common-col">
-                    <img src="./flipkart images/p2.jpeg" alt="Mobile">
-                    <h3>Techno Spark</h3>
-                    <h4>4500mAh Battery</h4>
-                    <h6>Now at ₹10000.</h6>
-                </div>
-                <div class="common-col">
-                    <img src="./flipkart images/p3.jpeg" alt="Mobile">
-                    <h3>Realme X2</h3>
-                    <h4>5000mAh Battery</h4>
-                    <h6>Now at ₹21999.</h6>
-                </div>
-                <div class="common-col">
-                    <img src="./flipkart images/p4.jpeg" alt="Mobile">
-                    <h3>Vivo v9</h3>
-                    <h4>5500mAh Battery</h4>
-                    <h6>Now at ₹14999.</h6>
-                </div>
-                <div class="common-col">
-                    <img src="./flipkart images/p5.jpeg" alt="Mobile">
-                    <h3>Oppo F1</h3>
-                    <h4>4000mAh Battery</h4>
-                    <h6>Now at ₹13899.</h6>
-                </div>
-                <div class="common-col">
-                    <img src="./flipkart images/p6.jpeg" alt="Mobile">
-                    <h3>Oneplush M1</h3>
-                    <h4>5500mAh Battery</h4>
-                    <h6>Now at ₹20999.</h6>
-                </div>
-                <div class="common-col">
-                    <img src="./flipkart images/p7.jpeg" alt="Mobile">
-                    <h3>Vivo V3</h3>
-                    <h4>5000mAh Battery</h4>
-                    <h6>Now at ₹10999.</h6>
-                </div>
+            <div>
+                <img src="flipkart images/adve.png" alt="Advertiseme Image">
             </div>
         </div>
+        
     </section>
 
     <!-- headphone and speaker section -->

@@ -1,4 +1,4 @@
-/* This will apply on every tags */
+/* This * will apply on every tags */
 *{
     margin: 0%;
     padding: 0%;
@@ -83,6 +83,55 @@ header{
 .fa-shopping-cart{
     padding-right: 10px;
 }
+.dealsoftheday {
+    display: flex;
+    width: 100%;
+    padding:10px 0px;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 16%);
+    justify-content: space-between;
+}
+code {
+    font-family: Consolas,"courier new";
+    color: white;
+    padding: 0px;
+    margin-left: -283px;
+    font-size: 205%;
+  }
+
+.deals {
+    margin-left: 30px;
+    font-size: 20px;
+    margin-top: 8px;
+    font-style: bold;
+}
+.clock {
+    display: flex;
+    justify-content: left;
+    text-align: left;
+    font-size: 20px;
+    margin-left: -318px;
+    margin-right: 1054px;
+    margin-top: 12px;
+}
+
+.dealsoftheday button {
+    height: 40px;
+    background-color: #2874f0;
+    color: white;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-right: 40px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    /* align-items: left; */
+}
+
+ 
+
+
 
 /* Category section */
 .category-row{
